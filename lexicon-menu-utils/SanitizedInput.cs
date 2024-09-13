@@ -16,6 +16,18 @@ public class SanitizedInput
         return input;
     }
 
+    public static string GetAlphabeticalWithSpaceInput(string message)
+    {
+        string input;
+        do
+        {
+            Console.Write(message);
+            input = Console.ReadLine() ?? "";
+        } while (!IsAlphabeticalWithSpace(input));
+
+        return input;
+    }
+
     public static string GetAlphanumericInput(string message)
     {
         string input;
@@ -58,6 +70,15 @@ public class SanitizedInput
             return false;
 
         string pattern = @"^[a-zA-Z]+$";
+        return Regex.IsMatch(input, pattern);
+    }
+
+    private static bool IsAlphabeticalWithSpace(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return false;
+
+        string pattern = @"^[a-zA-Z\s]+$";
         return Regex.IsMatch(input, pattern);
     }
 

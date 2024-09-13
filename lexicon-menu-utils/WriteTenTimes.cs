@@ -4,6 +4,7 @@ public class WriteTenTimes
 {
     public static void Run()
     {
+        Console.Clear();
         string input = SanitizedInput.GetAlphabeticalInput(
             "Enter a word that will then be printed ten times: "
         );

@@ -8,6 +8,7 @@ public class Program
 
         mainMenuConfig.AddOption("Calculate ticket price", CalculateTicket); //definierar metod nedan eftersom den behöver konfigurera meny
         mainMenuConfig.AddOption("10x word", WriteTenTimes.Run);
+        mainMenuConfig.AddOption("Third bird is the word", ThirdWord.Run);
 
         Menu mainMenu = new Menu("Main menu\n", mainMenuConfig.Options, mainMenuConfig.Actions);
         mainMenu.Run();
