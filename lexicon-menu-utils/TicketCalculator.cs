@@ -4,6 +4,7 @@ public class TicketCalculator
 {
     public static void SinglePerson()
     {
+        Console.Clear();
         int guestAge = int.Parse(SanitizedInput.GetNumericInput("Please enter age: "));
         if (guestAge < 20)
         {
@@ -19,10 +20,14 @@ public class TicketCalculator
                 System.Console.WriteLine("Ticket price with pensioner discount: 90kr");
         else
             System.Console.WriteLine("Standard ticket price: 120kr");
+
+        Console.WriteLine("\nPress any key to continue...");
+        Console.ReadKey();
     }
 
     public static void MultiPerson()
     {
+        Console.Clear();
         int guestCount = int.Parse(
             SanitizedInput.GetNumericInput("Please enter number of people in your party: ")
         );
@@ -50,8 +55,12 @@ public class TicketCalculator
             else
                 total += 120;
         }
+        Console.Clear();
         System.Console.WriteLine(
             $"The number of people in your party is {guestCount}\nYour ticket total will be {total}kr\nEnjoy your movie!"
         );
+
+        Console.WriteLine("\nPress any key to continue...");
+        Console.ReadKey();
     }
 }
