@@ -28,6 +28,18 @@ public class SanitizedInput
         return input;
     }
 
+    public static string GetNumericInput(string message)
+    {
+        string input;
+        do
+        {
+            Console.Write(message);
+            input = Console.ReadLine() ?? "";
+        } while (!IsNumeric(input));
+
+        return input;
+    }
+
     public static string GetAlphaScandinavianInput(string message)
     {
         string input;
@@ -55,6 +67,15 @@ public class SanitizedInput
             return false;
 
         string pattern = @"^[a-zA-Z0-9]+$";
+        return Regex.IsMatch(input, pattern);
+    }
+
+    private static bool IsNumeric(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return false;
+
+        string pattern = @"^[0-9]+$";
         return Regex.IsMatch(input, pattern);
     }
 

@@ -4,6 +4,6 @@ public class TicketCalculator
 {
     public static void SinglePerson()
     {
-        System.Console.WriteLine("TICKET EKZPENZIV!");
+        int userAge = int.Parse(SanitizedInput.GetNumericInput("Please enter age: "));
     }
 }
