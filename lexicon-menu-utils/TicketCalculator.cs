@@ -6,9 +6,17 @@ public class TicketCalculator
     {
         int guestAge = int.Parse(SanitizedInput.GetNumericInput("Please enter age: "));
         if (guestAge < 20)
-            System.Console.WriteLine("Ticket price with youth discount: 80kr");
+        {
+            if (guestAge < 5)
+                System.Console.WriteLine("Children under 5 enter free of charge!");
+            else
+                System.Console.WriteLine("Ticket price with youth discount: 80kr");
+        }
         else if (guestAge > 64)
-            System.Console.WriteLine("Ticket price with pensioner discount: 90kr");
+            if (guestAge > 100)
+                System.Console.WriteLine("Centenarians enter free of charge!");
+            else
+                System.Console.WriteLine("Ticket price with pensioner discount: 90kr");
         else
             System.Console.WriteLine("Standard ticket price: 120kr");
     }
@@ -30,9 +38,15 @@ public class TicketCalculator
         foreach (int age in guestAges)
         {
             if (age < 20)
-                total += 80;
+                if (age < 5)
+                    continue;
+                else
+                    total += 80;
             else if (age > 64)
-                total += 90;
+                if (age > 100)
+                    continue;
+                else
+                    total += 90;
             else
                 total += 120;
         }

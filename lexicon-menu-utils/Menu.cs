@@ -36,8 +36,6 @@ public class Menu
             else if (int.TryParse(choice, out int index) && index > 0 && index <= options.Count)
             {
                 actions[index - 1].Invoke();
-                Console.WriteLine("\nPress any key to continue...");
-                Console.ReadKey();
             }
             else
             {
