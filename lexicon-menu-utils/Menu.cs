@@ -31,6 +31,7 @@ public class Menu
             if (choice == "0")
             {
                 isRunning = false;
+                break;
             }
             else if (int.TryParse(choice, out int index) && index > 0 && index <= options.Count)
             {
