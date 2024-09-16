@@ -2,6 +2,19 @@ namespace lexicon_menu_utils;
 
 public class TicketCalculator
 {
+    public static void MakeMenu()
+    {
+        MenuConfig ticketMenuConfig = new MenuConfig();
+        ticketMenuConfig.AddOption("Calculate for one person", TicketCalculator.SinglePerson);
+        ticketMenuConfig.AddOption("Calculate for party", TicketCalculator.MultiPerson);
+        Menu ticketMenu = new Menu(
+            "Ticket menu\n",
+            ticketMenuConfig.Options,
+            ticketMenuConfig.Actions
+        );
+        ticketMenu.Run();
+    }
+
     public static void SinglePerson()
     {
         Console.Clear();
