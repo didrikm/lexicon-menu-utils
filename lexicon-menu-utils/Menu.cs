@@ -5,7 +5,6 @@ public class Menu
     private string header;
     private List<string> options;
     private List<Action> actions;
-    private bool isRunning;
 
     public Menu(string menuHeader, List<string> menuOptions, List<Action> menuActions)
     {
@@ -17,7 +16,6 @@ public class Menu
         header = menuHeader;
         options = menuOptions;
         actions = menuActions;
-        isRunning = true;
     }
 
     public void Run()
