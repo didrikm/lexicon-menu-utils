@@ -4,6 +4,7 @@ namespace lexicon_menu_utils;
 
 public class SanitizedInput
 {
+    //loopar tills användaren matat in något som stämmer överens med respektive regex
     public static string GetAlphabeticalInput(string message)
     {
         string input;

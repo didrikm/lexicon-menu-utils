@@ -2,6 +2,7 @@ namespace lexicon_menu_utils;
 
 public class TicketCalculator
 {
+    //Gör en undermeny
     public static void MakeMenu()
     {
         MenuConfig ticketMenuConfig = new MenuConfig();
@@ -15,6 +16,7 @@ public class TicketCalculator
         ticketMenu.Run();
     }
 
+    //Beräknar biljettpris för en person
     public static void SinglePerson()
     {
         Console.Clear();
@@ -38,6 +40,7 @@ public class TicketCalculator
         Console.ReadKey();
     }
 
+    //Beräknar pris för ett sällskap
     public static void MultiPerson()
     {
         Console.Clear();

@@ -6,6 +6,7 @@ public class Menu
     private List<string> options;
     private List<Action> actions;
 
+    //Meny-konstruktor. Bygger ut menyn med menynamn och möjliga val.
     public Menu(string menuHeader, List<string> menuOptions, List<Action> menuActions)
     {
         if (menuOptions.Count != menuActions.Count)
@@ -18,6 +19,7 @@ public class Menu
         actions = menuActions;
     }
 
+    //Startar meny-loopen
     public void Run()
     {
         while (true)
@@ -43,6 +45,7 @@ public class Menu
         }
     }
 
+    //Printar menyn
     private void PrintMenu()
     {
         System.Console.WriteLine(header);

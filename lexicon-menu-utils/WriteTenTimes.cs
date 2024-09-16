@@ -10,6 +10,7 @@ public class WriteTenTimes
         );
         for (int i = 0; i < 10; i++)
         {
+            //Write istället för WriteLine för att inte få newline char
             System.Console.Write($"{i + 1}. {input} ");
         }
 

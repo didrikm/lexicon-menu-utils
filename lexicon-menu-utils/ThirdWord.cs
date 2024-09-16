@@ -9,6 +9,7 @@ public class ThirdWord
             Console.Clear();
             string[] splitInput = SanitizedInput
                 .GetAlphabeticalWithSpaceInput("Please enter 3 or more words separated by spaces: ")
+                //splitoptions för att inte få tomma element
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries);
             if (splitInput.Length > 2)
             {
